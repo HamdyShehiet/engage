@@ -298,10 +298,13 @@ color: var(--text-Color);
     transition: all .5s ease;
 }
 .our-work .container .view-all a:hover{
-    /* --hover-color:rgb(51,51,51); */
     background-color:rgb(51,51,51);
 }
 
+.reviews{
+    padding: 0 6%;
+    background-color: #4d0c0c;
+}
 
 @media screen and (max-width:62em){
     /* header{
