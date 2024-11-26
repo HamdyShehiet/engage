@@ -35,7 +35,6 @@ header{
     padding: 0 6%;
     background-color: transparent;
 }
-
 .logo{
     display: inline-flex;
     align-items: center;
@@ -43,26 +42,22 @@ header{
 .logo img{
     width: 13rem;
 }
-
 .navbar ul{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
-.navbar ul li{
-    padding: 1rem .7rem;
-    position: relative;
-}
 .navbar ul li a{
     display: inline-block;
+    padding: 1rem .7rem;
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     color: var(--main-Color);
 }
 .navbar ul li .contact{
-    padding:.8rem 1.6rem;
+    padding: .8rem 1.6rem;
     color: var(--gray);
     background-color: var(--main-Color);
     border-radius: 3rem;
@@ -87,8 +82,7 @@ section:not(.home){
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
-    min-height:142vh;
+    min-height:115vh;
     background: url(../images/agency-1.jpg) no-repeat center/cover;
 } 
 .home .container .cover{
@@ -100,9 +94,9 @@ section:not(.home){
 }
 .content-box{
     display:inline-flex;
+    flex-direction: column;
     align-items:center;
     justify-content:center;
-    flex-direction: column;
     gap: 2.5rem;
     position: relative;
 }
@@ -218,7 +212,7 @@ color: var(--gray);
 }
 .our-work  .our-work-slider{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(26rem,1fr));
     place-items: center;
     gap: 3rem;
     width: 100%;
@@ -284,7 +278,7 @@ color: var(--gray);
     padding: 7rem 0;
 }
 .reviews .container i{
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--true-blue);
 }
 .reviews .comments{
@@ -387,10 +381,11 @@ color: var(--gray);
     color: var(--true-blue);
     transform: translateX(7px);
 }
+
+/* header{
+    background-color: var(--main-Color);
+} */
 @media screen and (max-width:62em){
-    /* header{
-        background-color: var(--main-Color);
-    } */
     header .fa-solid{
         display: inline-flex;
     }
@@ -408,9 +403,6 @@ color: var(--gray);
 }
 
 @media screen and (max-width:40em){
-    .home-section .container{
-        min-height:100vh;
-    } 
     .content-box{
         gap: 1rem;
     }
