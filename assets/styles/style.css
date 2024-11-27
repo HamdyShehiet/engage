@@ -368,7 +368,7 @@ color: var(--gray);
     font-size: 1.3rem;
     color: var(--gray);
 }
-.news .read-more:hover > a{
+.news .read-more:hover > *{
     color: var(--true-blue);
 }
 .news i{
@@ -378,7 +378,6 @@ color: var(--gray);
     transition: transform .5s ease-in-out;
 }
 .news .read-more:hover > i{
-    color: var(--true-blue);
     transform: translateX(7px);
 }
 .images-row .container{
