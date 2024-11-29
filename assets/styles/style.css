@@ -14,6 +14,7 @@ font-family: "Lato", sans-serif;
     --true-blue:#0461d5;
     --onyx:#383838;
     --gray:#807e7e;
+    --transparent-white:#ffffffd1;
     --dark-charcoal:#333333;
     --chinese-black:#1b1b1b;
     --whitesmoke:#f8f8f8;
@@ -252,10 +253,8 @@ color: var(--gray);
     transform: translateY(0px);
 }
 .our-work  .view-all{
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
-    padding: 3rem 0;
+    text-align: center;
+    margin-top: 3rem;
 }
 .our-work  .view-all a{
     display: inline-block;
@@ -265,11 +264,11 @@ color: var(--gray);
     background-color:var(--true-blue);
     color: var(--main-Color);
     border-radius: 5rem;
+    transition: all .5s ease;
 }
 .our-work .container .view-all a:hover{
     background-color:var(--dark-charcoal);
 }
-
 .reviews{
     background-color: var(--chinese-black) ;
 }
@@ -325,7 +324,7 @@ color: var(--gray);
     grid-template-columns: 1fr;
     gap: 3.8rem;
     min-height: 70vh;
-    padding: 7rem 0;
+    padding: 8rem 0;
 }
 .news  .news-title{
     text-align: center;
@@ -400,7 +399,41 @@ color: var(--gray);
     opacity: 0.5;
     transition: all 1s ease;
 }
-
+.contact-us{
+    background-color: var(--true-blue);
+}
+.contact-us .container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 2.5rem;
+    padding: 8rem 0;
+}
+.contact-us .container h2{
+    font-size: clamp(3rem,3vw,5rem);
+    color: var(--main-Color);
+}
+.contact-us .container p{
+    text-align: center;
+    font-size:2.5rem;
+    font-weight: 500;
+    color: var(--transparent-white);
+}
+.contact-us .container a{
+    display: inline-block;
+    padding: 2rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: 2px solid var(--main-Color);
+    border-radius: 5rem;
+    background-color:var(--true-blue);
+    color: var(--main-Color);
+    transition: all .5s ease;
+}
+.contact-us .container a:hover{
+    background-color:var(--main-Color);
+    color: var(--onyx);
+}
 /* header{
     background-color: var(--main-Color);
 } */
