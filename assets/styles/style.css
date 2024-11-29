@@ -434,6 +434,32 @@ color: var(--gray);
     background-color:var(--main-Color);
     color: var(--onyx);
 }
+/*footer{
+     background-color:var(--chinese-black) ;
+}
+footer .footer-up{
+    
+}
+.footer-up .container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 8rem 0;
+    background-color: brown;
+}
+.footer-up .container .footer-content{
+    flex-basis: calc(100% / 4 - 2rem);
+    background-color: #fff;
+}
+.footer-up .footer-content h3{
+    font-size: 2rem;
+}
+.footer-up .footer-content p{
+    font-size: 1.5rem;
+}
+.footer-up .footer-content ul{
+    font-size: 1.5rem;
+} */
 /* header{
     background-color: var(--main-Color);
 } */
