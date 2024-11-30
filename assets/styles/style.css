@@ -134,6 +134,7 @@ section:not(.home){
     font-size: 1.5rem;
     font-weight: 600;
     border-radius: 5rem;
+    transition: all .5s ease;
 }
 .links .about-us{
     background-color:var(--main-Color);
@@ -148,7 +149,7 @@ section:not(.home){
 }
 .links .portfolio:hover{
 background-color: var(--main-Color);
-color: var(--gray);
+color: var(--onyx);
 }
 .services {
     background-color: var(--main-Color);
@@ -442,7 +443,7 @@ footer{
 } */
 .footer-up .container{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 8rem 0;
@@ -467,6 +468,7 @@ footer{
 }
 .footer-up .footer-content ul li{
     display: inline-flex;
+    align-items: center;
     gap: 1rem;
     font-size: 1.6rem;
     font-weight: 400;
@@ -479,6 +481,48 @@ footer{
     transition: all .5s ease;
 }
 .footer-up .footer-content li a:hover{
+    color: var(--main-Color);
+}
+.footer-down .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 8rem 0;
+}
+.footer-down  p.copyright{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+.footer-down .icons a{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: var(--gray);
+    background-color: rgb(38, 54, 30);
+    transition: all .5s ease;
+}
+.footer-down .icons .facebook-icon:hover{
+    background-color: #3F51B5;
+    color: var(--main-Color);
+}
+.footer-down .icons .google-icon:hover{
+    background-color: #F4511E;
+    color: var(--main-Color);
+}
+.footer-down .icons .linkedin-icon:hover {
+    background-color:#0288D1 ;
+    color: var(--main-Color);
+}
+.footer-down .icons .twitter-icon:hover{
+    background-color:#03A9F4 ;
     color: var(--main-Color);
 }
 @media screen and (max-width:62em){
@@ -513,6 +557,9 @@ footer{
     .footer-up .container .footer-content{
         flex-basis: calc(100% - 2rem);
     }
+    .footer-down .container{
+        justify-content: center;
+    }
 }
 ::-webkit-scrollbar{
     height: 4px;
@@ -521,10 +568,6 @@ footer{
 ::-webkit-scrollbar-thumb{
     background-color: var(--true-blue);
     border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
 }
 ::-webkit-scrollbar-track{
     background-color:var(--background-Color);
