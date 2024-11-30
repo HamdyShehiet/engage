@@ -7,7 +7,6 @@ border:none;
 outline: none;
 list-style: none;
 text-decoration: none;
-font-family: "Lato", sans-serif;
 }
 :root{
     --main-Color:#fff;
@@ -25,12 +24,17 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+body{
+    background-color: var(--main-Color);
+    font-family: "Lato", sans-serif;
+}
 header{
     position: fixed;
     top: 0;
     z-index: 100;
     width: 100%;
     background-color: transparent;
+    /* background-color: #fff; */
 }
 header .container{
     display: flex;
@@ -40,6 +44,10 @@ header .container{
 }
 .logo img{
     width: 13rem;
+}
+nav{
+    display: flex;
+    align-items: center;
 }
 .navbar ul{
     display: flex;
@@ -64,16 +72,16 @@ header .container{
     background-color: var(--true-blue);
     color: var(--main-Color);
 }
-/* menu icon */
-header .fa-solid{
+
+header .navbar label i{
     display: none;
-    /* display: inline-flex; */
     font-size: 2.5rem;
     color: var(--main-Color);
 }
-main{
-    background-color: var(--main-Color);
-}
+header .navbar input{
+    display: none;
+} 
+
 .container{
     padding: 0 4%;
     overflow: hidden;
@@ -511,11 +519,21 @@ footer .footer-up{
     color: var(--main-Color);
 }
 @media screen and (max-width:62em){
-    header .fa-solid{
-        display: inline-flex;
+     header .navbar label i{
+        display: block;
     }
-    .navbar{
-        display: none;
+    .navbar ul{
+        display:none;
+        /* flex-direction: column;
+        position:absolute;
+        top: 5rem;
+        left: 0;
+        width:100%;
+        height: 70vh;
+        background-color: #815656; */
+    }
+    header .navbar #click:checked ~ ul{
+        left: 0;
     }
     .links a{
         padding:1.5rem 2rem;
