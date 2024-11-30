@@ -7,6 +7,7 @@ border:none;
 outline: none;
 list-style: none;
 text-decoration: none;
+font-family: "Lato", sans-serif;
 }
 :root{
     --main-Color:#fff;
@@ -26,7 +27,6 @@ html{
 }
 body{
     background-color: var(--main-Color);
-    font-family: "Lato", sans-serif;
 }
 header{
     position: fixed;
@@ -34,7 +34,6 @@ header{
     z-index: 100;
     width: 100%;
     background-color: transparent;
-    /* background-color: #fff; */
 }
 header .container{
     display: flex;
@@ -72,16 +71,15 @@ nav{
     background-color: var(--true-blue);
     color: var(--main-Color);
 }
-
-header .navbar label i{
+header .navbar .icon{
     display: none;
     font-size: 2.5rem;
     color: var(--main-Color);
+    cursor: pointer;
 }
 header .navbar input{
     display: none;
 } 
-
 .container{
     padding: 0 4%;
     overflow: hidden;
@@ -98,8 +96,7 @@ header .navbar input{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
-    opacity: 0.8;
+    background-color: rgb(0, 0, 0, 0.8);
 }
 .content-box{
     display:inline-flex;
@@ -137,6 +134,7 @@ header .navbar input{
     font-weight: 600;
     border-radius: 5rem;
     transition: all .5s ease;
+    cursor: pointer;
 }
 .links .about-us{
     background-color:var(--main-Color);
@@ -155,7 +153,6 @@ color: var(--onyx);
 }
 .services {
     padding: 8.5rem 0;
-    background-color: var(--main-Color);
 }
 .services .container{
     display: grid;
@@ -502,38 +499,60 @@ footer .footer-up{
     background-color: var(--chinese-black);
     transition: all .5s ease;
 }
+.footer-down .icons a:hover{
+    color: var(--main-Color);
+}
 .footer-down .icons .facebook-icon:hover{
     background-color: #3F51B5;
-    color: var(--main-Color);
 }
 .footer-down .icons .google-icon:hover{
     background-color: #F4511E;
-    color: var(--main-Color);
 }
 .footer-down .icons .linkedin-icon:hover {
     background-color:#0288D1 ;
-    color: var(--main-Color);
 }
 .footer-down .icons .twitter-icon:hover{
     background-color:#03A9F4 ;
-    color: var(--main-Color);
 }
 @media screen and (max-width:62em){
-     header .navbar label i{
+    header .navbar .icon{
         display: block;
     }
-    .navbar ul{
-        display:none;
-        /* flex-direction: column;
-        position:absolute;
-        top: 5rem;
-        left: 0;
-        width:100%;
-        height: 70vh;
-        background-color: #815656; */
+    .navbar .sidebar-menu .icon{
+        color: var(--gray);
     }
-    header .navbar #click:checked ~ ul{
-        left: 0;
+    .navbar .sidebar-menu{
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 5.5rem;
+        position:absolute;
+        top: 0;
+        right: -100%;
+        z-index: 200;
+        width:50%;
+        height: 100vh;
+        padding:2rem;
+        background-color: var(--main-Color);
+        transition: all .6s ease;
+    }
+    header .navbar #click:checked ~ .sidebar-menu{
+        right: 0;
+    }
+    .navbar ul a{
+        color: var(--gray);
+    }
+    .navbar ul li a:hover{
+        background-color: initial;
+        color: var(--true-blue);
+    }
+    .navbar ul li .contact{
+        background-color:var(--true-blue);
+        color: var(--main-Color);
+        transition:initial;
+    }
+    .navbar ul li .contact:hover{
+        background-color: var(--dark-charcoal);
     }
     .links a{
         padding:1.5rem 2rem;
@@ -574,5 +593,3 @@ footer .footer-up{
 ::-webkit-scrollbar-track{
     background-color:var(--background-Color);
 }
-
-
