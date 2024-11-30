@@ -12,33 +12,31 @@ font-family: "Lato", sans-serif;
 :root{
     --main-Color:#fff;
     --true-blue:#0461d5;
+    --whitesmoke:#f8f8f8;
+    --transparent-white:#ffffffd1;
+    --black:#151515;
+    --chinese-black:#1b1b1b;
+    --dark-charcoal:#333333;
     --onyx:#383838;
     --gray:#807e7e;
-    --transparent-white:#ffffffd1;
-    --dark-charcoal:#333333;
-    --chinese-black:#1b1b1b;
-    --whitesmoke:#f8f8f8;
+    --gainsboro:#dbddddd7;
 }
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
-
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 100;
     width: 100%;
-    height: 7.5rem;
-    padding: 0 5%;
     background-color: transparent;
 }
-.logo{
-    display: inline-flex;
+header .container{
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 2rem 4%;
 }
 .logo img{
     width: 13rem;
@@ -47,14 +45,12 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 .navbar ul a{
     display: inline-block;
-    padding: 1rem .7rem;
     font-size: 1.5rem;
     font-weight: 600;
-    text-transform: uppercase;
     color: var(--main-Color);
 }
 .navbar ul li .contact{
@@ -78,13 +74,12 @@ header .fa-solid{
 main{
     background-color: var(--main-Color);
 }
-section:not(.home){
-    padding: 0 5%;
+.container{
+    padding: 0 4%;
     overflow: hidden;
 }
 .home .container{
     display: flex;
-    padding: 0 3%;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -128,7 +123,6 @@ section:not(.home){
     margin-top: 1.5rem;
 }
 .links a{
-    --gainsboro:#dbddddd7;
     display: inline-block;
     padding:2rem 3rem;
     font-size: 1.5rem;
@@ -152,6 +146,7 @@ background-color: var(--main-Color);
 color: var(--onyx);
 }
 .services {
+    padding: 8.5rem 0;
     background-color: var(--main-Color);
 }
 .services .container{
@@ -160,8 +155,6 @@ color: var(--onyx);
     align-content:center ;
     gap: 2rem;
     width: 100%;
-    min-height: 55vh;
-    padding: 5rem 0;
 }
 .services  .service-box{
     display: flex;
@@ -173,13 +166,8 @@ color: var(--onyx);
     font-size: 3rem;
     color: var(--gray);
 }
-.services   .service-content{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 1rem;
-}
 .services   .service-title{
+    margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 800;
     letter-spacing:.01rem;
@@ -192,6 +180,7 @@ color: var(--onyx);
     color: var(--gray);
 } 
 .our-work{
+    padding: 8rem 0;
     background-color: var(--whitesmoke);
 }
 .our-work .container{
@@ -199,8 +188,6 @@ color: var(--onyx);
     flex-direction:column;
     align-items: center;
     gap: 3.8rem;
-    min-height: 70vh;
-    padding: 7rem 0;
 }
 .our-work  .our-work-title{
     font-size: clamp(3rem,3vw,5rem);
@@ -271,6 +258,7 @@ color: var(--onyx);
     background-color:var(--dark-charcoal);
 }
 .reviews{
+    padding: 7rem 0;
     background-color: var(--chinese-black) ;
 }
 .reviews .container{
@@ -278,7 +266,6 @@ color: var(--onyx);
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    padding: 7rem 0;
 }
 .reviews .container i{
     font-size: 5rem;
@@ -289,12 +276,6 @@ color: var(--onyx);
     grid-template-columns: 1fr ;
     gap: 3rem;
 }
-.reviews .comments .comment{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-}
 .reviews  .comment-description{
     text-align: center;
     line-height: 160%;
@@ -303,6 +284,7 @@ color: var(--onyx);
     color: var(--gray);
 }
 .reviews  .comment-speaker p{
+    margin-top: 3rem ;
     text-align: center;
     font-size: 1.8rem;
     font-weight: 600;
@@ -316,16 +298,14 @@ color: var(--onyx);
     font-weight: 500;
     color: var(--gray);
 }
-
 .news{
+    padding: 8rem 0;
     background-color: var(--whitesmoke) ;
 }
 .news .container{
     display: grid;
     grid-template-columns: 1fr;
     gap: 3.8rem;
-    min-height: 70vh;
-    padding: 8rem 0;
 }
 .news  .news-title{
     text-align: center;
@@ -380,12 +360,13 @@ color: var(--onyx);
 .news .read-more:hover > i{
     transform: translateX(7px);
 }
+.images-row{
+    padding: 8rem 0;
+}
 .images-row .container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
     gap: 2.5rem ;
-    min-height: 50vh;
-    padding:7rem 0;
 }
 .images-row  .image-box{
     display: inline-flex;
@@ -401,6 +382,7 @@ color: var(--onyx);
     transition: all 1s ease;
 }
 .contact-us{
+    padding: 8rem 0;
     background-color: var(--true-blue);
 }
 .contact-us .container{
@@ -408,10 +390,10 @@ color: var(--onyx);
     flex-direction: column;
     align-items:center;
     gap: 2.5rem;
-    padding: 8rem 0;
 }
 .contact-us .container h2{
     font-size: clamp(3rem,3vw,5rem);
+    font-weight: 900;
     color: var(--main-Color);
 }
 .contact-us .container p{
@@ -423,7 +405,7 @@ color: var(--onyx);
 .contact-us .container a{
     display: inline-block;
     padding: 2rem 3rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     border: 2px solid var(--main-Color);
     border-radius: 5rem;
@@ -436,17 +418,17 @@ color: var(--onyx);
     color: var(--onyx);
 }
 footer{
-    background-color:var(--chinese-black) ;
+    background-color:var(--black) ;
 }
-/* footer .footer-up{
-    
-} */
+footer .footer-up{
+    padding: 7rem 0;
+    background-color: var(--chinese-black);
+}
 .footer-up .container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 8rem 0;
 }
 .footer-up .container .footer-content{
     flex-basis: calc(100% / 4 - 2rem);
@@ -483,13 +465,16 @@ footer{
 .footer-up .footer-content li a:hover{
     color: var(--main-Color);
 }
+.footer-down{
+    padding-top: 4rem;
+    padding-bottom: 4rem ;
+}
 .footer-down .container{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 8rem 0;
 }
 .footer-down  p.copyright{
     font-size: 1.6rem;
@@ -506,7 +491,7 @@ footer{
     font-size: 2rem;
     border-radius: 50%;
     color: var(--gray);
-    background-color: rgb(38, 54, 30);
+    background-color: var(--chinese-black);
     transition: all .5s ease;
 }
 .footer-down .icons .facebook-icon:hover{
@@ -536,10 +521,6 @@ footer{
         padding:1.5rem 2rem;
         font-size: 1.3rem;
     }
-    .services .container{
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
     .footer-up .container .footer-content{
         flex-basis: calc(100% / 2 - 2rem);
     }
@@ -553,6 +534,9 @@ footer{
         gap: 1rem;
         padding:0;
         margin-top: .5rem;
+    }
+    .services .container{
+        grid-template-columns:1fr;
     }
     .footer-up .container .footer-content{
         flex-basis: calc(100% - 2rem);
